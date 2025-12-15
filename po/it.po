@@ -1,0 +1,11 @@
+#: src/handlers/pdf_handler.vala:25
+msgid "PDF Properties"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:35
+msgid "General Info"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:42
+msgid "Title:"
+msgstr ""
