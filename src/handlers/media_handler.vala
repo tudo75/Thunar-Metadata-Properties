@@ -40,44 +40,22 @@ public class MediaHandler : GLib.Object, FileHandler {
                 this.is_audio_only = true;
             }
         } catch (Error e) {
-            warning("Media Analysis Error: %s", e.message);
+            warning(_("Media Analysis Error: %s"), e.message);
         }
     }
 
-    public Widget get_main_view() {
-        var box = new Box(Orientation.VERTICAL, 6);
-        box.valign = Align.CENTER;
-        box.halign = Align.CENTER;
-
-        string icon_name = is_audio_only ? "audio-x-generic" : "video-x-generic";
-        var icon = new Gtk.Image.from_icon_name(icon_name);
-        
-        icon.pixel_size = 128;
-        icon.add_css_class("dim-label");
-        
-        box.append(icon);
-        var name_lbl = new Label(file.get_basename());
-        name_lbl.add_css_class("title-2");
-        name_lbl.wrap = true;
-        name_lbl.max_width_chars = 30;
-        name_lbl.justify = Justification.CENTER;
-        box.append(name_lbl);
-        
-        return box;
+    public string get_page_title() {
+        return is_audio_only ? _("Audio Properties") : _("Video Properties");
     }
 
     public Widget get_properties_panel() {
-        var scroll = new ScrolledWindow(); 
-        var box = new Box(Gtk.Orientation.VERTICAL, 6);
-        box.margin_top = 12; box.margin_start = 12; box.margin_end = 12; box.margin_bottom = 12;
-
         this.grid = new Grid();
         grid.column_spacing = 12;
         grid.row_spacing = 6;
         
         int row = 0;
 
-        string header_text = is_audio_only ? "<b>Audio Metadata</b>" : "<b>Video Metadata</b>";
+        string header_text = is_audio_only ? _("<b>Audio Metadata</b>") : _("<b>Video Metadata</b>");
         UiHelper.add_section_header(grid, ref row, header_text);
 
         if (is_audio_only) build_audio_ui(ref row);
@@ -85,10 +63,7 @@ public class MediaHandler : GLib.Object, FileHandler {
 
         display_embedded_images(ref row);
 
-        box.append(grid);
-        var spacer = new Label(""); spacer.vexpand = true; box.append(spacer);
-        scroll.child = box;
-        return scroll;
+        return grid;
     }
 
     private void build_audio_ui(ref int row) {
@@ -97,28 +72,28 @@ public class MediaHandler : GLib.Object, FileHandler {
         extract_tags_loose(out main_title, out main_artist, out album, out genre, out album_artist, out track, out date);
         string track_str = (track > 0) ? "%u".printf(track) : "-";
 
-        UiHelper.create_label_row(grid, ref row, "Main Title:", main_title);
-        UiHelper.create_label_row(grid, ref row, "Artist:", main_artist);
-        UiHelper.create_label_row(grid, ref row, "Album:", album);
-        UiHelper.create_label_row(grid, ref row, "Track:", track_str);
-        UiHelper.create_label_row(grid, ref row, "Genre:", genre);
-        UiHelper.create_label_row(grid, ref row, "Date:", date);
+        UiHelper.create_label_row(grid, ref row, _("Main Title:"), main_title);
+        UiHelper.create_label_row(grid, ref row, _("Artist:"), main_artist);
+        UiHelper.create_label_row(grid, ref row, _("Album:"), album);
+        UiHelper.create_label_row(grid, ref row, _("Track:"), track_str);
+        UiHelper.create_label_row(grid, ref row, _("Genre:"), genre);
+        UiHelper.create_label_row(grid, ref row, _("Date:"), date);
         
         UiHelper.add_separator(grid, ref row);
-        UiHelper.add_section_header(grid, ref row, "Technical Details");
+        UiHelper.add_section_header(grid, ref row, _("Technical Details"));
 
         string codec = "-", channels = "-", rate = "-", bitrate = "-", br_mode="-", lang = "-";
         var a_stream = get_first_stream<DiscovererAudioInfo>();
         if (a_stream != null) parse_audio_stream(a_stream, out codec, out channels, out rate, out bitrate, out br_mode, out lang);
 
-        UiHelper.create_label_row(grid, ref row, "Container:", get_container_name());
-        UiHelper.create_label_row(grid, ref row, "Duration:", get_duration_string());
-        UiHelper.create_label_row(grid, ref row, "Codec:", codec);
-        UiHelper.create_label_row(grid, ref row, "Bitrate:", bitrate);
-        UiHelper.create_label_row(grid, ref row, "Bitrate Mode:", br_mode);
-        UiHelper.create_label_row(grid, ref row, "Sample Rate:", rate);
-        UiHelper.create_label_row(grid, ref row, "Channels:", channels);
-        UiHelper.create_label_row(grid, ref row, "Language:", lang);
+        UiHelper.create_label_row(grid, ref row, _("Container:"), get_container_name());
+        UiHelper.create_label_row(grid, ref row, _("Duration:"), get_duration_string());
+        UiHelper.create_label_row(grid, ref row, _("Codec:"), codec);
+        UiHelper.create_label_row(grid, ref row, _("Bitrate:"), bitrate);
+        UiHelper.create_label_row(grid, ref row, _("Bitrate Mode:"), br_mode);
+        UiHelper.create_label_row(grid, ref row, _("Sample Rate:"), rate);
+        UiHelper.create_label_row(grid, ref row, _("Channels:"), channels);
+        UiHelper.create_label_row(grid, ref row, _("Language:"), lang);
     }
 
     private void build_video_ui(ref int row) {
@@ -126,65 +101,65 @@ public class MediaHandler : GLib.Object, FileHandler {
         uint trk=0;
         extract_tags_strict_container(out main_title, out main_artist, out album, out genre, out aa, out trk, out date);
 
-        UiHelper.create_label_row(grid, ref row, "File Title:", main_title);
-        if (main_artist != "-") UiHelper.create_label_row(grid, ref row, "Artist:", main_artist);
-        if (date != "-") UiHelper.create_label_row(grid, ref row, "Date:", date);
-        UiHelper.create_label_row(grid, ref row, "Container:", get_container_name());
-        UiHelper.create_label_row(grid, ref row, "Duration:", get_duration_string());
+        UiHelper.create_label_row(grid, ref row, _("File Title:"), main_title);
+        if (main_artist != "-") UiHelper.create_label_row(grid, ref row, _("Artist:"), main_artist);
+        if (date != "-") UiHelper.create_label_row(grid, ref row, _("Date:"), date);
+        UiHelper.create_label_row(grid, ref row, _("Container:"), get_container_name());
+        UiHelper.create_label_row(grid, ref row, _("Duration:"), get_duration_string());
 
         var video_streams = get_streams<DiscovererVideoInfo>();
         int v_idx = 1;
         foreach (var v in video_streams) {
             UiHelper.add_separator(grid, ref row);
-            string header = (video_streams.length() > 1) ? "Video Stream %d".printf(v_idx++) : "Video Stream";
+            string header = (video_streams.length() > 1) ? _("Video Stream %d").printf(v_idx++) : _("Video Stream");
             UiHelper.add_section_header(grid, ref row, header);
 
             string v_title = get_tag_string(v.get_tags(), Gst.Tags.TITLE) ?? "-";
-            if (v_title != "-") UiHelper.create_label_row(grid, ref row, "Stream Title:", v_title);
+            if (v_title != "-") UiHelper.create_label_row(grid, ref row, _("Stream Title:"), v_title);
 
             string v_codec="-", res="-", fps="-", v_bitrate="-", br_mode="-", fr_mode="-", v_lang="-";
             parse_video_stream(v, out v_codec, out res, out fps, out fr_mode, out v_bitrate, out br_mode, out v_lang);
 
-            UiHelper.create_label_row(grid, ref row, "Codec:", v_codec);
-            UiHelper.create_label_row(grid, ref row, "Resolution:", res);
-            UiHelper.create_label_row(grid, ref row, "Framerate:", fps);
-            UiHelper.create_label_row(grid, ref row, "Frame Mode:", fr_mode);
-            UiHelper.create_label_row(grid, ref row, "Bitrate:", v_bitrate);
-            UiHelper.create_label_row(grid, ref row, "Bitrate Mode:", br_mode);
-            if (v_lang != "-") UiHelper.create_label_row(grid, ref row, "Language:", v_lang);
+            UiHelper.create_label_row(grid, ref row, _("Codec:"), v_codec);
+            UiHelper.create_label_row(grid, ref row, _("Resolution:"), res);
+            UiHelper.create_label_row(grid, ref row, _("Framerate:"), fps);
+            UiHelper.create_label_row(grid, ref row, _("Frame Mode:"), fr_mode);
+            UiHelper.create_label_row(grid, ref row, _("Bitrate:"), v_bitrate);
+            UiHelper.create_label_row(grid, ref row, _("Bitrate Mode:"), br_mode);
+            if (v_lang != "-") UiHelper.create_label_row(grid, ref row, _("Language:"), v_lang);
         }
 
         var audio_streams = get_streams<DiscovererAudioInfo>();
         int a_idx = 1;
         foreach (var a in audio_streams) {
             UiHelper.add_separator(grid, ref row);
-            string header = (audio_streams.length() > 1) ? "Audio Stream %d".printf(a_idx++) : "Audio Stream";
+            string header = (audio_streams.length() > 1) ? _("Audio Stream %d").printf(a_idx++) : _("Audio Stream");
             UiHelper.add_section_header(grid, ref row, header);
 
             string a_title = get_tag_string(a.get_tags(), Gst.Tags.TITLE) ?? "-";
-            if (a_title != "-") UiHelper.create_label_row(grid, ref row, "Stream Title:", a_title);
+            if (a_title != "-") UiHelper.create_label_row(grid, ref row, _("Stream Title:"), a_title);
 
             string a_codec="-", a_chans="-", a_rate="-", a_bitrate="-", br_mode="-", a_lang="-";
             parse_audio_stream(a, out a_codec, out a_chans, out a_rate, out a_bitrate, out br_mode, out a_lang);
 
-            UiHelper.create_label_row(grid, ref row, "Codec:", a_codec);
-            UiHelper.create_label_row(grid, ref row, "Language:", a_lang);
-            UiHelper.create_label_row(grid, ref row, "Channels:", a_chans);
-            UiHelper.create_label_row(grid, ref row, "Sample Rate:", a_rate);
-            UiHelper.create_label_row(grid, ref row, "Bitrate Mode:", br_mode);
+            UiHelper.create_label_row(grid, ref row, _("Codec:"), a_codec);
+            UiHelper.create_label_row(grid, ref row, _("Language:"), a_lang);
+            UiHelper.create_label_row(grid, ref row, _("Channels:"), a_chans);
+            UiHelper.create_label_row(grid, ref row, _("Sample Rate:"), a_rate);
+            UiHelper.create_label_row(grid, ref row, _("Bitrate Mode:"), br_mode);
         }
 
         var sub_streams = get_streams<DiscovererSubtitleInfo>();
         if (sub_streams.length() > 0) {
             UiHelper.add_separator(grid, ref row);
-            UiHelper.add_section_header(grid, ref row, "Subtitles");
+            UiHelper.add_section_header(grid, ref row, _("Subtitles"));
             int s_idx = 1;
             foreach (var s in sub_streams) {
                 string s_title = get_tag_string(s.get_tags(), Gst.Tags.TITLE) ?? "-";
                 string s_lang_code = get_tag_string(s.get_tags(), Gst.Tags.LANGUAGE_CODE) ?? "-";
-                string s_lang = (s_lang_code != "-") ? s_lang_code.up() : "Unknown";
-                string display_val = (s_title != "-") ? "%s (%s)".printf(s_title, s_lang) : s_lang;
-                UiHelper.create_label_row(grid, ref row, "Track %d:".printf(s_idx++), display_val);
+                string s_lang = (s_lang_code != "-") ? s_lang_code.up() : _("Unknown");
+                string display_val = (s_title != "-") ? _("%s (%s)").printf(s_title, s_lang) : s_lang;
+                UiHelper.create_label_row(grid, ref row, _("Track %d:").printf(s_idx++), display_val);
             }
         }
     }
@@ -208,26 +183,26 @@ public class MediaHandler : GLib.Object, FileHandler {
 
         if (image_list.length() > 0) {
             UiHelper.add_separator(grid, ref row);
-            UiHelper.add_section_header(grid, ref row, "Embedded Images");
+            UiHelper.add_section_header(grid, ref row, _("Embedded Images"));
 
             foreach (var img_struct in image_list) {
-                var texture = ImageHelper.texture_from_sample(img_struct.sample);
-                if (texture != null) {
-                    var pic = new Picture.for_paintable(texture);
-                    pic.can_shrink = true;
-                    pic.content_fit = ContentFit.CONTAIN;
-                    pic.height_request = 250; 
-                    pic.halign = Align.START;
-                    
-                    var lbl = new Label(img_struct.label);
+                var pixbuf = ImageHelper.pixbuf_from_sample(img_struct.sample);
+                if (pixbuf != null) {
+                    var img = new Gtk.Image();
+                    img.set_from_pixbuf(pixbuf);
+                    img.height_request = 250;
+                    img.valign = Align.START;
+                    img.halign = Align.START;
+
+                    var lbl = new Label("<b>%s</b>".printf(img_struct.label));
                     lbl.valign = Align.START;
                     lbl.xalign = 1.0f;
-                    lbl.add_css_class("heading"); 
-                    lbl.wrap = true; 
+                    lbl.use_markup = true;
+                    lbl.wrap = true;
                     lbl.max_width_chars = 20;
 
                     grid.attach(lbl, 0, row, 1, 1);
-                    grid.attach(pic, 1, row, 1, 1);
+                    grid.attach(img, 1, row, 1, 1);
                     row++;
                 }
             }
@@ -240,16 +215,16 @@ public class MediaHandler : GLib.Object, FileHandler {
         uint len = t.get_tag_size(Gst.Tags.IMAGE);
         for (uint i = 0; i < len; i++) {
             Gst.Sample? s = null;
-            if (t.get_sample(Gst.Tags.IMAGE, out s) && s != null) {
-                image_list.append({ s, get_image_label(s, "Cover Art") });
+                if (t.get_sample(Gst.Tags.IMAGE, out s) && s != null) {
+                image_list.append({ s, get_image_label(s, _("Cover Art")) });
             }
         }
         
         len = t.get_tag_size(Gst.Tags.PREVIEW_IMAGE);
         for (uint i = 0; i < len; i++) {
             Gst.Sample? s = null;
-            if (t.get_sample(Gst.Tags.PREVIEW_IMAGE, out s) && s != null) {
-                image_list.append({ s, "Preview Image" });
+                if (t.get_sample(Gst.Tags.PREVIEW_IMAGE, out s) && s != null) {
+                image_list.append({ s, _("Preview Image") });
             }
         }
     }
@@ -260,25 +235,25 @@ public class MediaHandler : GLib.Object, FileHandler {
 
         Gst.Tag.ImageType type_enum;
         if (s_info.get_enum("image-type", typeof(Gst.Tag.ImageType), out type_enum)) {
-             switch (type_enum) {
-                case Gst.Tag.ImageType.FRONT_COVER: return "Front Cover";
-                case Gst.Tag.ImageType.BACK_COVER: return "Back Cover";
-                case Gst.Tag.ImageType.LEAFLET_PAGE: return "Leaflet Page";
-                case Gst.Tag.ImageType.MEDIUM: return "Medium / Disc";
-                case Gst.Tag.ImageType.LEAD_ARTIST: return "Lead Artist";
-                case Gst.Tag.ImageType.ARTIST: return "Artist";
-                case Gst.Tag.ImageType.CONDUCTOR: return "Conductor";
-                case Gst.Tag.ImageType.BAND_ORCHESTRA: return "Band / Orchestra";
-                case Gst.Tag.ImageType.COMPOSER: return "Composer";
-                case Gst.Tag.ImageType.LYRICIST: return "Lyricist";
-                case Gst.Tag.ImageType.RECORDING_LOCATION: return "Recording Location";
-                case Gst.Tag.ImageType.DURING_RECORDING: return "During Recording";
-                case Gst.Tag.ImageType.DURING_PERFORMANCE: return "During Performance";
-                case Gst.Tag.ImageType.VIDEO_CAPTURE: return "Video Capture";
-                case Gst.Tag.ImageType.FISH: return "Fish / Icon";
-                case Gst.Tag.ImageType.ILLUSTRATION: return "Illustration";
-                case Gst.Tag.ImageType.BAND_ARTIST_LOGO: return "Band / Artist Logo";
-                case Gst.Tag.ImageType.PUBLISHER_STUDIO_LOGO: return "Publisher / Studio Logo";
+                 switch (type_enum) {
+                     case Gst.Tag.ImageType.FRONT_COVER: return _("Front Cover");
+                     case Gst.Tag.ImageType.BACK_COVER: return _("Back Cover");
+                     case Gst.Tag.ImageType.LEAFLET_PAGE: return _("Leaflet Page");
+                     case Gst.Tag.ImageType.MEDIUM: return _("Medium / Disc");
+                     case Gst.Tag.ImageType.LEAD_ARTIST: return _("Lead Artist");
+                     case Gst.Tag.ImageType.ARTIST: return _("Artist");
+                     case Gst.Tag.ImageType.CONDUCTOR: return _("Conductor");
+                     case Gst.Tag.ImageType.BAND_ORCHESTRA: return _("Band / Orchestra");
+                     case Gst.Tag.ImageType.COMPOSER: return _("Composer");
+                     case Gst.Tag.ImageType.LYRICIST: return _("Lyricist");
+                     case Gst.Tag.ImageType.RECORDING_LOCATION: return _("Recording Location");
+                     case Gst.Tag.ImageType.DURING_RECORDING: return _("During Recording");
+                     case Gst.Tag.ImageType.DURING_PERFORMANCE: return _("During Performance");
+                     case Gst.Tag.ImageType.VIDEO_CAPTURE: return _("Video Capture");
+                     case Gst.Tag.ImageType.FISH: return _("Fish / Icon");
+                     case Gst.Tag.ImageType.ILLUSTRATION: return _("Illustration");
+                     case Gst.Tag.ImageType.BAND_ARTIST_LOGO: return _("Band / Artist Logo");
+                     case Gst.Tag.ImageType.PUBLISHER_STUDIO_LOGO: return _("Publisher / Studio Logo");
                 default: break;
              }
         }
@@ -363,10 +338,10 @@ public class MediaHandler : GLib.Object, FileHandler {
         uint n = v.get_framerate_num();
         uint d = v.get_framerate_denom();
         if (d > 0) {
-            fps = "%.2f fps".printf((double)n / d);
-            fr_mode = (n == 0) ? "Variable (VFR)" : "Constant (CFR)";
+            fps = _("%.2f fps").printf((double)n / d);
+            fr_mode = (n == 0) ? _("Variable (VFR)") : _("Constant (CFR)");
         } else {
-            fr_mode = "Variable (VFR)";
+            fr_mode = _("Variable (VFR)");
         }
         uint br_val = v.get_bitrate();
         if (br_val > 0) bitrate = "%u kbps".printf(br_val / 1000);
@@ -392,14 +367,14 @@ public class MediaHandler : GLib.Object, FileHandler {
     }
 
     private string detect_bitrate_mode(Gst.TagList? tags, uint current_bitrate) {
-        if (tags == null) return "Constant (CBR)";
+        if (tags == null) return _("Constant (CBR)");
         uint min_br = 0, max_br = 0;
         bool has_min = tags.get_uint(Gst.Tags.MINIMUM_BITRATE, out min_br);
         bool has_max = tags.get_uint(Gst.Tags.MAXIMUM_BITRATE, out max_br);
-        if (has_min && has_max && min_br != max_br) return "Variable (VBR)";
+        if (has_min && has_max && min_br != max_br) return _("Variable (VBR)");
         uint nominal = 0;
-        if (tags.get_uint(Gst.Tags.NOMINAL_BITRATE, out nominal)) return "Variable (VBR)";
-        return "Constant (CBR)";
+        if (tags.get_uint(Gst.Tags.NOMINAL_BITRATE, out nominal)) return _("Variable (VBR)");
+        return _("Constant (CBR)");
     }
 
     private GLib.List<T> get_streams<T>() {
@@ -422,64 +397,64 @@ public class MediaHandler : GLib.Object, FileHandler {
     private string get_readable_codec(Gst.Structure structure) {
         string raw = structure.get_name();
         switch (raw) {
-            case "video/x-h264": return "H.264 (AVC)";
-            case "video/x-h265": return "H.265 (HEVC)";
-            case "video/x-vp8":  return "VP8";
-            case "video/x-vp9":  return "VP9";
-            case "video/x-av1":  return "AV1";
-            case "video/x-theora": return "Theora";
-            case "video/x-xvid":   return "Xvid (MPEG-4 Part 2)";
-            case "video/x-divx":   return "DivX (MPEG-4 Part 2)";
+            case "video/x-h264": return _("H.264 (AVC)");
+            case "video/x-h265": return _("H.265 (HEVC)");
+            case "video/x-vp8":  return _("VP8");
+            case "video/x-vp9":  return _("VP9");
+            case "video/x-av1":  return _("AV1");
+            case "video/x-theora": return _("Theora");
+            case "video/x-xvid":   return _("Xvid (MPEG-4 Part 2)");
+            case "video/x-divx":   return _("DivX (MPEG-4 Part 2)");
             case "video/mpeg":
                 int ver = 0;
                 if (structure.get_int("mpegversion", out ver)) {
-                    if (ver == 4) return "MPEG-4 Part 2 (Xvid/DivX)";
-                    if (ver == 2) return "MPEG-2 Video";
-                    if (ver == 1) return "MPEG-1 Video";
+                    if (ver == 4) return _("MPEG-4 Part 2 (Xvid/DivX)");
+                    if (ver == 2) return _("MPEG-2 Video");
+                    if (ver == 1) return _("MPEG-1 Video");
                 }
-                return "MPEG Video";
-            case "video/x-raw":  return "Raw Video";
+                return _("MPEG Video");
+            case "video/x-raw":  return _("Raw Video");
             case "audio/mpeg":
                 int ver = 0;
                 if (structure.get_int("mpegversion", out ver)) {
-                    if (ver == 4) return "AAC (MPEG-4 Audio)";
-                    if (ver == 2) return "MPEG-2 Audio";
-                    if (ver == 1) return "MP3 (MPEG-1 Audio)";
+                    if (ver == 4) return _("AAC (MPEG-4 Audio)");
+                    if (ver == 2) return _("MPEG-2 Audio");
+                    if (ver == 1) return _("MP3 (MPEG-1 Audio)");
                 }
-                return "MPEG Audio";
-            case "audio/x-aac":     return "AAC Audio";
-            case "audio/mp4a-latm": return "AAC (LATM)";
-            case "audio/x-vorbis":  return "Vorbis";
-            case "audio/x-opus":    return "Opus";
-            case "audio/x-flac":    return "FLAC";
-            case "audio/x-wav":     return "WAV / PCM";
-            case "audio/ac3":       return "Dolby Digital (AC-3)";
-            case "audio/eac3":      return "Dolby Digital Plus (E-AC-3)";
-            case "subpicture/x-dvd": return "DVD Subtitles";
-            case "subpicture/x-pgs": return "Bluray PGS";
-            case "subtitle/x-kate": return "Kate Subtitles";
-            case "text/x-raw":      return "Text Subtitles";
+                return _("MPEG Audio");
+            case "audio/x-aac":     return _("AAC Audio");
+            case "audio/mp4a-latm": return _("AAC (LATM)");
+            case "audio/x-vorbis":  return _("Vorbis");
+            case "audio/x-opus":    return _("Opus");
+            case "audio/x-flac":    return _("FLAC");
+            case "audio/x-wav":     return _("WAV / PCM");
+            case "audio/ac3":       return _("Dolby Digital (AC-3)");
+            case "audio/eac3":      return _("Dolby Digital Plus (E-AC-3)");
+            case "subpicture/x-dvd": return _("DVD Subtitles");
+            case "subpicture/x-pgs": return _("Bluray PGS");
+            case "subtitle/x-kate": return _("Kate Subtitles");
+            case "text/x-raw":      return _("Text Subtitles");
             default: return raw.replace("video/x-", "").replace("audio/x-", "").replace("subpicture/x-", "").up();
         }
     }
 
     private string get_container_name() {
-        if (info == null) return "Unknown";
+        if (info == null) return _("Unknown");
         var stream_info = info.get_stream_info();
-        if (stream_info == null) return "Unknown";
+        if (stream_info == null) return _("Unknown");
         var caps = stream_info.get_caps();
-        if (caps == null || caps.get_size() == 0) return "Unknown";
+        if (caps == null || caps.get_size() == 0) return _("Unknown");
         string raw_caps = caps.get_structure(0).get_name();
 
         switch (raw_caps) {
-            case "video/x-matroska": return "Matroska (MKV)";
-            case "video/quicktime":  return "QuickTime / MP4";
-            case "video/mp4":        return "MPEG-4 Part 14";
-            case "video/x-msvideo":  return "AVI";
-            case "application/ogg":  return "Ogg Container";
-            case "application/x-id3":return "MP3 (ID3 Tagged)";
-            case "audio/x-wav":      return "WAV Audio";
-            case "audio/x-flac":     return "FLAC Audio";
+            case "video/x-matroska": return _("Matroska (MKV)");
+            case "video/quicktime":  return _("QuickTime / MP4");
+            case "video/mp4":        return _("MPEG-4 Part 14");
+            case "video/x-msvideo":  return _("AVI");
+            case "application/ogg":  return _("Ogg Container");
+            case "application/x-id3":return _("MP3 (ID3 Tagged)");
+            case "audio/x-wav":      return _("WAV Audio");
+            case "audio/x-flac":     return _("FLAC Audio");
             default: return raw_caps.replace("video/x-", "").replace("application/", "").up();
         }
     }
@@ -492,10 +467,5 @@ public class MediaHandler : GLib.Object, FileHandler {
         int s = (int)(secs % 60);
         if (h > 0) return "%d:%02d:%02d".printf(h, m, s);
         return "%02d:%02d".printf(m, s);
-    }
-
-    public void save_metadata() {
-        var dialog = new AlertDialog("Metadata is Read-Only.");
-        dialog.show(null);
     }
 }

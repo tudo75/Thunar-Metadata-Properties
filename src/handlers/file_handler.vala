@@ -20,11 +20,11 @@ public interface FileHandler : GLib.Object {
                 return new PdfHandler(file);
             } else if (content_type.has_prefix("image/")) {
                 return new ImageHandler(file);
+            }else if (content_type.has_prefix("video/") || content_type.has_prefix("audio/")) {
+                return new MediaHandler(file);
             }
             /*
-            else if (content_type.has_prefix("video/") || content_type.has_prefix("audio/")) {
-                return new MediaHandler(file);
-            } else if (
+             else if (
                 // Extension Checks
                 name.has_suffix(".docx") ||
                 name.has_suffix(".xlsx") ||

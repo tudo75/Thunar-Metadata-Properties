@@ -35,6 +35,8 @@ msgstr ""
 
 #: src/handlers/image_handler.vala:52 src/handlers/image_handler.vala:264
 #: src/handlers/pdf_handler.vala:54 src/handlers/pdf_handler.vala:139
+#: src/handlers/media_handler.vala:160 src/handlers/media_handler.vala:442
+#: src/handlers/media_handler.vala:444 src/handlers/media_handler.vala:446
 msgid "Unknown"
 msgstr ""
 
@@ -354,7 +356,7 @@ msgstr ""
 msgid "Keywords:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:48
+#: src/handlers/pdf_handler.vala:48 src/handlers/media_handler.vala:83
 msgid "Technical Details"
 msgstr ""
 
@@ -421,4 +423,389 @@ msgstr ""
 
 #: src/handlers/pdf_handler.vala:124
 msgid "... and more"
+msgstr ""
+
+#: src/handlers/media_handler.vala:43
+#, c-format
+msgid "Media Analysis Error: %s"
+msgstr ""
+
+#: src/handlers/media_handler.vala:48
+msgid "Audio Properties"
+msgstr ""
+
+#: src/handlers/media_handler.vala:48
+msgid "Video Properties"
+msgstr ""
+
+#: src/handlers/media_handler.vala:58
+msgid "<b>Audio Metadata</b>"
+msgstr ""
+
+#: src/handlers/media_handler.vala:58
+msgid "<b>Video Metadata</b>"
+msgstr ""
+
+#: src/handlers/media_handler.vala:75
+msgid "Main Title:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:76 src/handlers/media_handler.vala:105
+msgid "Artist:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:77
+msgid "Album:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:78
+msgid "Track:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:79
+msgid "Genre:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:80 src/handlers/media_handler.vala:106
+msgid "Date:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:89 src/handlers/media_handler.vala:107
+msgid "Container:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:90 src/handlers/media_handler.vala:108
+msgid "Duration:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:91 src/handlers/media_handler.vala:123
+#: src/handlers/media_handler.vala:145
+msgid "Codec:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:92 src/handlers/media_handler.vala:127
+msgid "Bitrate:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:93 src/handlers/media_handler.vala:128
+#: src/handlers/media_handler.vala:149
+msgid "Bitrate Mode:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:94 src/handlers/media_handler.vala:148
+msgid "Sample Rate:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:95 src/handlers/media_handler.vala:147
+msgid "Channels:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:96 src/handlers/media_handler.vala:129
+#: src/handlers/media_handler.vala:146
+msgid "Language:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:104
+msgid "File Title:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:114
+#, c-format
+msgid "Video Stream %d"
+msgstr ""
+
+#: src/handlers/media_handler.vala:114
+msgid "Video Stream"
+msgstr ""
+
+#: src/handlers/media_handler.vala:118 src/handlers/media_handler.vala:140
+msgid "Stream Title:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:124
+msgid "Resolution:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:125
+msgid "Framerate:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:126
+msgid "Frame Mode:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:136
+#, c-format
+msgid "Audio Stream %d"
+msgstr ""
+
+#: src/handlers/media_handler.vala:136
+msgid "Audio Stream"
+msgstr ""
+
+#: src/handlers/media_handler.vala:155
+msgid "Subtitles"
+msgstr ""
+
+#: src/handlers/media_handler.vala:161
+#, c-format
+msgid "%s (%s)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:162
+#, c-format
+msgid "Track %d:"
+msgstr ""
+
+#: src/handlers/media_handler.vala:186
+msgid "Embedded Images"
+msgstr ""
+
+#: src/handlers/media_handler.vala:219
+msgid "Cover Art"
+msgstr ""
+
+#: src/handlers/media_handler.vala:227
+msgid "Preview Image"
+msgstr ""
+
+#: src/handlers/media_handler.vala:239
+msgid "Front Cover"
+msgstr ""
+
+#: src/handlers/media_handler.vala:240
+msgid "Back Cover"
+msgstr ""
+
+#: src/handlers/media_handler.vala:241
+msgid "Leaflet Page"
+msgstr ""
+
+#: src/handlers/media_handler.vala:242
+msgid "Medium / Disc"
+msgstr ""
+
+#: src/handlers/media_handler.vala:243
+msgid "Lead Artist"
+msgstr ""
+
+#: src/handlers/media_handler.vala:244
+msgid "Artist"
+msgstr ""
+
+#: src/handlers/media_handler.vala:245
+msgid "Conductor"
+msgstr ""
+
+#: src/handlers/media_handler.vala:246
+msgid "Band / Orchestra"
+msgstr ""
+
+#: src/handlers/media_handler.vala:247
+msgid "Composer"
+msgstr ""
+
+#: src/handlers/media_handler.vala:248
+msgid "Lyricist"
+msgstr ""
+
+#: src/handlers/media_handler.vala:249
+msgid "Recording Location"
+msgstr ""
+
+#: src/handlers/media_handler.vala:250
+msgid "During Recording"
+msgstr ""
+
+#: src/handlers/media_handler.vala:251
+msgid "During Performance"
+msgstr ""
+
+#: src/handlers/media_handler.vala:252
+msgid "Video Capture"
+msgstr ""
+
+#: src/handlers/media_handler.vala:253
+msgid "Fish / Icon"
+msgstr ""
+
+#: src/handlers/media_handler.vala:254
+msgid "Illustration"
+msgstr ""
+
+#: src/handlers/media_handler.vala:255
+msgid "Band / Artist Logo"
+msgstr ""
+
+#: src/handlers/media_handler.vala:256
+msgid "Publisher / Studio Logo"
+msgstr ""
+
+#: src/handlers/media_handler.vala:341
+#, c-format
+msgid "%.2f fps"
+msgstr ""
+
+#: src/handlers/media_handler.vala:342 src/handlers/media_handler.vala:344
+msgid "Variable (VFR)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:342
+msgid "Constant (CFR)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:370 src/handlers/media_handler.vala:377
+msgid "Constant (CBR)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:374 src/handlers/media_handler.vala:376
+msgid "Variable (VBR)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:400
+msgid "H.264 (AVC)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:401
+msgid "H.265 (HEVC)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:402
+msgid "VP8"
+msgstr ""
+
+#: src/handlers/media_handler.vala:403
+msgid "VP9"
+msgstr ""
+
+#: src/handlers/media_handler.vala:404
+msgid "AV1"
+msgstr ""
+
+#: src/handlers/media_handler.vala:405
+msgid "Theora"
+msgstr ""
+
+#: src/handlers/media_handler.vala:406
+msgid "Xvid (MPEG-4 Part 2)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:407
+msgid "DivX (MPEG-4 Part 2)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:411
+msgid "MPEG-4 Part 2 (Xvid/DivX)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:412
+msgid "MPEG-2 Video"
+msgstr ""
+
+#: src/handlers/media_handler.vala:413
+msgid "MPEG-1 Video"
+msgstr ""
+
+#: src/handlers/media_handler.vala:415
+msgid "MPEG Video"
+msgstr ""
+
+#: src/handlers/media_handler.vala:416
+msgid "Raw Video"
+msgstr ""
+
+#: src/handlers/media_handler.vala:420
+msgid "AAC (MPEG-4 Audio)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:421
+msgid "MPEG-2 Audio"
+msgstr ""
+
+#: src/handlers/media_handler.vala:422
+msgid "MP3 (MPEG-1 Audio)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:424
+msgid "MPEG Audio"
+msgstr ""
+
+#: src/handlers/media_handler.vala:425
+msgid "AAC Audio"
+msgstr ""
+
+#: src/handlers/media_handler.vala:426
+msgid "AAC (LATM)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:427
+msgid "Vorbis"
+msgstr ""
+
+#: src/handlers/media_handler.vala:428
+msgid "Opus"
+msgstr ""
+
+#: src/handlers/media_handler.vala:429
+msgid "FLAC"
+msgstr ""
+
+#: src/handlers/media_handler.vala:430
+msgid "WAV / PCM"
+msgstr ""
+
+#: src/handlers/media_handler.vala:431
+msgid "Dolby Digital (AC-3)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:432
+msgid "Dolby Digital Plus (E-AC-3)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:433
+msgid "DVD Subtitles"
+msgstr ""
+
+#: src/handlers/media_handler.vala:434
+msgid "Bluray PGS"
+msgstr ""
+
+#: src/handlers/media_handler.vala:435
+msgid "Kate Subtitles"
+msgstr ""
+
+#: src/handlers/media_handler.vala:436
+msgid "Text Subtitles"
+msgstr ""
+
+#: src/handlers/media_handler.vala:450
+msgid "Matroska (MKV)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:451
+msgid "QuickTime / MP4"
+msgstr ""
+
+#: src/handlers/media_handler.vala:452
+msgid "MPEG-4 Part 14"
+msgstr ""
+
+#: src/handlers/media_handler.vala:453
+msgid "AVI"
+msgstr ""
+
+#: src/handlers/media_handler.vala:454
+msgid "Ogg Container"
+msgstr ""
+
+#: src/handlers/media_handler.vala:455
+msgid "MP3 (ID3 Tagged)"
+msgstr ""
+
+#: src/handlers/media_handler.vala:456
+msgid "WAV Audio"
+msgstr ""
+
+#: src/handlers/media_handler.vala:457
+msgid "FLAC Audio"
 msgstr ""
