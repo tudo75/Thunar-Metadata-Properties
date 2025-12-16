@@ -40,19 +40,19 @@ public class PdfHandler : GLib.Object, FileHandler {
         string keywords_str = (doc != null) ? (doc.get_keywords() ?? "-") : "-";
 
         UiHelper.create_label_row(grid, ref row, _("Title:"), title_str);
-        UiHelper.create_label_row(grid, ref row, "Author:", author_str);
-        UiHelper.create_label_row(grid, ref row, "Subject:", subject_str);
-        UiHelper.create_label_row(grid, ref row, "Keywords:", keywords_str);
+        UiHelper.create_label_row(grid, ref row, _("Author:"), author_str);
+        UiHelper.create_label_row(grid, ref row, _("Subject:"), subject_str);
+        UiHelper.create_label_row(grid, ref row, _("Keywords:"), keywords_str);
         
         UiHelper.add_separator(grid, ref row);
-        UiHelper.add_section_header(grid, ref row, "Technical Details");
+        UiHelper.add_section_header(grid, ref row, _("Technical Details"));
 
         string creator_str = (doc != null) ? (doc.get_creator() ?? "-") : "-";
         string producer_str = (doc != null) ? (doc.get_producer() ?? "-") : "-";
         long c_date = (doc != null) ? doc.get_creation_date() : 0;
         long m_date = (doc != null) ? doc.get_modification_date() : 0;
-        string pdf_ver = (doc != null) ? doc.get_pdf_version_string() : "Unknown";
-        string is_sec = (doc != null) ? "No (Open)" : "Encrypted"; 
+        string pdf_ver = (doc != null) ? doc.get_pdf_version_string() : _("Unknown");
+        string is_sec = (doc != null) ? _("No (Open)") : _("Encrypted"); 
 
         string size_str = "Unknown";
         if (doc != null && doc.get_n_pages() > 0) {
@@ -64,25 +64,25 @@ public class PdfHandler : GLib.Object, FileHandler {
         }
         string pages_str = (doc != null) ? "%d".printf(doc.get_n_pages()) : "0";
 
-        UiHelper.create_label_row(grid, ref row, "Creator:", creator_str);
-        UiHelper.create_label_row(grid, ref row, "Producer:", producer_str);
-        UiHelper.create_label_row(grid, ref row, "Created:", get_date_string(c_date));
-        UiHelper.create_label_row(grid, ref row, "Modified:", get_date_string(m_date));
-        UiHelper.create_label_row(grid, ref row, "PDF Version:", pdf_ver);
-        UiHelper.create_label_row(grid, ref row, "Security:", is_sec);
-        UiHelper.create_label_row(grid, ref row, "Paper Size:", size_str);
-        UiHelper.create_label_row(grid, ref row, "Pages:", pages_str);
+        UiHelper.create_label_row(grid, ref row, _("Creator:"), creator_str);
+        UiHelper.create_label_row(grid, ref row, _("Producer:"), producer_str);
+        UiHelper.create_label_row(grid, ref row, _("Created:"), get_date_string(c_date));
+        UiHelper.create_label_row(grid, ref row, _("Modified:"), get_date_string(m_date));
+        UiHelper.create_label_row(grid, ref row, _("PDF Version:"), pdf_ver);
+        UiHelper.create_label_row(grid, ref row, _("Security:"), is_sec);
+        UiHelper.create_label_row(grid, ref row, _("Paper Size:"), size_str);
+        UiHelper.create_label_row(grid, ref row, _("Pages:"), pages_str);
         
         // 4. Fonts Section (Rich List)
         if (font_list.length() > 0) {
             UiHelper.add_separator(grid, ref row);
-            UiHelper.add_section_header(grid, ref row, "Embedded Fonts");
+            UiHelper.add_section_header(grid, ref row, _("Embedded Fonts"));
             
             // Pass 'true' to enable markup parsing in UiHelper
-            UiHelper.create_list_row(grid, ref row, "Font List:", font_list, true);
+            UiHelper.create_list_row(grid, ref row, _("Font List:"), font_list, true);
         } else {
              UiHelper.add_separator(grid, ref row);
-             UiHelper.create_label_row(grid, ref row, "Fonts:", "None found");
+             UiHelper.create_label_row(grid, ref row, _("Fonts:"), _("None found"));
         }
 
         return grid;
@@ -99,7 +99,7 @@ public class PdfHandler : GLib.Object, FileHandler {
         int count = 0;
         do {
             unowned string? fname = iter.get_name();
-            if (fname == null) fname = "Unnamed";
+            if (fname == null) fname = _("Unnamed");
             
             // 1. Escape Name (IMPORTANT for Pango Markup)
             string safe_name = Markup.escape_text(fname);
@@ -121,7 +121,7 @@ public class PdfHandler : GLib.Object, FileHandler {
 
             count++;
             if (count >= MAX_FONTS) {
-                font_list.append("<i>... and more</i>");
+                font_list.append("<i>%s</i>".printf(_("... and more")));
                 break;
             }
         } while (iter.next());
@@ -136,7 +136,7 @@ public class PdfHandler : GLib.Object, FileHandler {
             case Poppler.FontType.TRUETYPEOT: return "TrueType (OT)";
             case Poppler.FontType.CID_TYPE2: return "CID TrueType";
             case Poppler.FontType.CID_TYPE2OT: return "CID TrueType (OT)";
-            default: return "Unknown";
+            default: return _("Unknown");
         }
     }
 

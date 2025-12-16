@@ -8,14 +8,346 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.tudo75.thunar-metadata-properties\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-16 00:02+0100\n"
+"POT-Creation-Date: 2025-12-16 13:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: src/handlers/file_handler.vala:17
+#, c-format
+msgid "Factory: Opening '%s' (MIME: %s)\n"
+msgstr ""
+
+#: src/handlers/file_handler.vala:49
+#, c-format
+msgid "Error detecting type: %s\n"
+msgstr ""
+
+#: src/handlers/image_handler.vala:21
+msgid "Image Properties"
+msgstr ""
+
+#: src/handlers/image_handler.vala:31
+msgid "Image Metadata"
+msgstr ""
+
+#: src/handlers/image_handler.vala:41
+msgid "GIMP XCF metadata not supported."
+msgstr ""
+
+#: src/handlers/image_handler.vala:42
+msgid "No metadata found or format unsupported."
+msgstr ""
+
+#: src/handlers/image_handler.vala:43
+msgid "Status:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:52
+#, c-format
+msgid "%d x %d pixels"
+msgstr ""
+
+#: src/handlers/image_handler.vala:52 src/handlers/image_handler.vala:264
+#: src/handlers/pdf_handler.vala:54 src/handlers/pdf_handler.vala:139
+msgid "Unknown"
+msgstr ""
+
+#: src/handlers/image_handler.vala:60
+msgid "sRGB"
+msgstr ""
+
+#: src/handlers/image_handler.vala:61
+msgid "Uncalibrated"
+msgstr ""
+
+#: src/handlers/image_handler.vala:63
+msgid "Dimensions:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:64
+msgid "Format:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:65
+msgid "Date Taken:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:66
+msgid "Color Space:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:67
+msgid "Orientation:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:77
+msgid "Camera Data"
+msgstr ""
+
+#: src/handlers/image_handler.vala:79
+msgid "Camera Make:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:80
+msgid "Camera Model:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:84
+msgid "Lens:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:102
+msgid "Exposure Settings"
+msgstr ""
+
+#: src/handlers/image_handler.vala:104
+msgid "Aperture:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:105
+msgid "Exposure:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:106
+msgid "ISO Speed:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:107
+msgid "Exposure Program:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:108
+msgid "Metering Mode:"
+msgstr ""
+
+#. Focal Length logic
+#: src/handlers/image_handler.vala:112
+#, c-format
+msgid "%s mm"
+msgstr ""
+
+#: src/handlers/image_handler.vala:114
+#, c-format
+msgid "(35mm equiv: %s mm)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:116
+msgid "Focal Length:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:119
+msgid "Flash:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:120
+msgid "White Balance:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:136
+msgid "GPS Location"
+msgstr ""
+
+#: src/handlers/image_handler.vala:138
+msgid "Latitude:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:139
+msgid "Longitude:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:140
+msgid "Altitude:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:140
+#, c-format
+msgid "%.1f meters"
+msgstr ""
+
+#: src/handlers/image_handler.vala:159
+msgid "Authoring &amp; Description"
+msgstr ""
+
+#: src/handlers/image_handler.vala:161
+msgid "Artist/Creator:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:162
+msgid "Copyright:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:163
+msgid "Description:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:164
+msgid "Software:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:182
+#, c-format
+msgid "f/%.1f"
+msgstr ""
+
+#: src/handlers/image_handler.vala:185
+msgid "f/"
+msgstr ""
+
+#. Logic similar to Thunar-APR to show 1/60 instead of 0.0166
+#. Raw usually comes as "1/60" or "10/600" or "0.0166"
+#: src/handlers/image_handler.vala:191 src/handlers/image_handler.vala:201
+#, c-format
+msgid "%s sec"
+msgstr ""
+
+#. Convert decimal to 1/x
+#. Round to nearest int
+#: src/handlers/image_handler.vala:199
+#, c-format
+msgid "1/%d sec"
+msgstr ""
+
+#: src/handlers/image_handler.vala:208
+msgid "Did not fire"
+msgstr ""
+
+#: src/handlers/image_handler.vala:210
+msgid "Fired"
+msgstr ""
+
+#: src/handlers/image_handler.vala:211
+msgid ", return detected"
+msgstr ""
+
+#: src/handlers/image_handler.vala:212
+msgid ", return not detected"
+msgstr ""
+
+#: src/handlers/image_handler.vala:213
+msgid ", auto"
+msgstr ""
+
+#: src/handlers/image_handler.vala:214
+msgid ", manual"
+msgstr ""
+
+#: src/handlers/image_handler.vala:215
+msgid ", red-eye reduction"
+msgstr ""
+
+#: src/handlers/image_handler.vala:222
+msgid "Auto"
+msgstr ""
+
+#: src/handlers/image_handler.vala:223 src/handlers/image_handler.vala:247
+msgid "Manual"
+msgstr ""
+
+#: src/handlers/image_handler.vala:230
+msgid "Top-left (Normal)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:231
+msgid "Top-right (Mirrored)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:232
+msgid "Bottom-right (180°)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:233
+msgid "Bottom-left (V-Flip)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:234
+msgid "Left-top (Transpose)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:235
+msgid "Right-top (90° CW)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:236
+msgid "Right-bottom (Transverse)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:237
+msgid "Left-bottom (90° CCW)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:238
+msgid "Normal"
+msgstr ""
+
+#: src/handlers/image_handler.vala:246
+msgid "Not defined"
+msgstr ""
+
+#: src/handlers/image_handler.vala:248
+msgid "Normal program"
+msgstr ""
+
+#: src/handlers/image_handler.vala:249
+msgid "Aperture priority"
+msgstr ""
+
+#: src/handlers/image_handler.vala:250
+msgid "Shutter priority"
+msgstr ""
+
+#: src/handlers/image_handler.vala:251
+msgid "Creative program"
+msgstr ""
+
+#: src/handlers/image_handler.vala:252
+msgid "Action program"
+msgstr ""
+
+#: src/handlers/image_handler.vala:253
+msgid "Portrait mode"
+msgstr ""
+
+#: src/handlers/image_handler.vala:254
+msgid "Landscape mode"
+msgstr ""
+
+#: src/handlers/image_handler.vala:255 src/handlers/image_handler.vala:272
+#, c-format
+msgid "Unknown (%ld)"
+msgstr ""
+
+#: src/handlers/image_handler.vala:265
+msgid "Average"
+msgstr ""
+
+#: src/handlers/image_handler.vala:266
+msgid "CenterWeightedAverage"
+msgstr ""
+
+#: src/handlers/image_handler.vala:267
+msgid "Spot"
+msgstr ""
+
+#: src/handlers/image_handler.vala:268
+msgid "MultiSpot"
+msgstr ""
+
+#: src/handlers/image_handler.vala:269
+msgid "Pattern"
+msgstr ""
+
+#: src/handlers/image_handler.vala:270
+msgid "Partial"
+msgstr ""
+
+#: src/handlers/image_handler.vala:271
+msgid "Other"
+msgstr ""
 
 #: src/handlers/pdf_handler.vala:25
 msgid "PDF Properties"
@@ -27,4 +359,85 @@ msgstr ""
 
 #: src/handlers/pdf_handler.vala:42
 msgid "Title:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:43
+msgid "Author:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:44
+msgid "Subject:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:45
+msgid "Keywords:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:48
+msgid "Technical Details"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:55
+msgid "No (Open)"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:55
+msgid "Encrypted"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:67
+msgid "Creator:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:68
+msgid "Producer:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:69
+msgid "Created:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:70
+msgid "Modified:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:71
+msgid "PDF Version:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:72
+msgid "Security:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:73
+msgid "Paper Size:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:74
+msgid "Pages:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:79
+msgid "Embedded Fonts"
+msgstr ""
+
+#. Pass 'true' to enable markup parsing in UiHelper
+#: src/handlers/pdf_handler.vala:82
+msgid "Font List:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:85
+msgid "Fonts:"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:85
+msgid "None found"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:102
+msgid "Unnamed"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:124
+msgid "... and more"
 msgstr ""

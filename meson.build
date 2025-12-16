@@ -46,7 +46,7 @@ sources = files(
     'src/utils/ui_helper.vala',
 #    'src/utils/image_helper.vala',
     'src/handlers/file_handler.vala',
-#    'src/handlers/image_handler.vala',
+    'src/handlers/image_handler.vala',
     'src/handlers/pdf_handler.vala',
 #    'src/handlers/media_handler.vala',
 #    'src/handlers/office_handler.vala',

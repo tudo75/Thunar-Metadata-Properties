@@ -14,15 +14,15 @@ public interface FileHandler : GLib.Object {
             string content_type = info.get_content_type();
             string name = info.get_display_name().down();
 
-            print("Factory: Opening '%s' (MIME: %s)\n", name, content_type);
+            print(_("Factory: Opening '%s' (MIME: %s)\n"), name, content_type);
             
             if (content_type == "application/pdf") {
                 return new PdfHandler(file);
-            } 
-            /*
-            else if (content_type.has_prefix("image/")) {
+            } else if (content_type.has_prefix("image/")) {
                 return new ImageHandler(file);
-            } else if (content_type.has_prefix("video/") || content_type.has_prefix("audio/")) {
+            }
+            /*
+            else if (content_type.has_prefix("video/") || content_type.has_prefix("audio/")) {
                 return new MediaHandler(file);
             } else if (
                 // Extension Checks
@@ -46,7 +46,7 @@ public interface FileHandler : GLib.Object {
             }
             */
         } catch (GLib.Error e) {
-            print("Error detecting type: %s\n", e.message);
+            print(_("Error detecting type: %s\n"), e.message);
         }
 
         return null; // Fallback
