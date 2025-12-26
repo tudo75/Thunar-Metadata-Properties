@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>UiHelper &ndash; com.github.tudo75.thunar-metadata-properties &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">UiHelper &ndash; com.github.tudo75.thunar-metadata-properties Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">com.github.tudo75.thunar-metadata-properties</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">UiHelper</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="UiHelper.add_section_header.html">add_section_header</a></li>
+          <li class="static_method"><a href="UiHelper.add_separator.html">add_separator</a></li>
+          <li class="static_method"><a href="UiHelper.create_label_row.html">create_label_row</a></li>
+          <li class="static_method"><a href="UiHelper.create_list_row.html">create_list_row</a></li>
+          <li class="creation_method"><a href="UiHelper.UiHelper.html">UiHelper</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">UiHelper</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#UiHelper" alt="Object hierarchy for UiHelper" src="img/UiHelper.svg"/>
+
+      <map id="UiHelper" name="UiHelper">
+<area shape="rect" id="node1" href="UiHelper.html" title="UiHelper" alt="" coords="5,5,95,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">UiHelper</span></b>
+        </div>
+        <div class="description">
+          <p>UiHelper: A utility class for creating and managing UI components in a Gtk application. This class provides static methods to create 
+            labeled rows, list rows, section headers, and separators within a Gtk Grid layout. Methods: - create_label_row: Creates a row with a bold 
+            label and a value. - create_list_row: Creates a row with a bold label and a list of items, supporting markup. - add_section_header: Adds a
+            section header to the grid. - add_separator: Adds a horizontal separator to the grid.</p>
+        </div><br/>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">com.github.tudo75.thunar-metadata-properties</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">void</span> <b><a href="UiHelper.add_section_header.html" class="static_method">add_section_header</a></b> (<span class="main_type"><span class="class">Grid</span></span> grid, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="struct">int</span></span> row, <span class="main_basic_type"><span class="class">string</span></span> text)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a section header to the grid.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">void</span> <b><a href="UiHelper.add_separator.html" class="static_method">add_separator</a></b> (<span class="main_type"><span class="class">Grid</span></span> grid, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="struct">int</span></span> row)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Adds a horizontal separator to the grid.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">void</span> <b><a href="UiHelper.create_label_row.html" class="static_method">create_label_row</a></b> (<span class="main_type"><span class="class">Grid</span></span> grid, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="struct">int</span></span> row, <span class="main_basic_type"><span class="class">string</span></span> label_text, <span class="main_basic_type"><span class="class">string</span></span> value_text)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a labeled row in the provided grid.</span>
+            </div></li>
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_keyword">void</span> <b><a href="UiHelper.create_list_row.html" class="static_method">create_list_row</a></b> (<span class="main_type"><span class="class">Grid</span></span> grid, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="struct">int</span></span> row, <span class="main_basic_type"><span class="class">string</span></span> label_text, <span class="main_type"><span class="class">List</span></span>&lt;<span class="main_basic_type"><span class="class">string</span></span>&gt; items, <span class="main_basic_type"><span class="struct">bool</span></span> use_markup = <span class="main_literal">false</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a list row in the provided grid.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="UiHelper.UiHelper.html" class="creation_method">UiHelper</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="https://docs.vala.dev"><kbd>valadoc</kbd></a>
+    </div>
+  </body>
+</html>

@@ -6,6 +6,7 @@
 	],
     "settings": {
         "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
-        "C_Cpp.default.compileCommands": "/home/nick/dev_projects/Thunar-Metadata-Properties/build/compile_commands.json"
+		"C_Cpp.default.compileCommands": "/home/nick/dev_projects/Thunar-Metadata-Properties/build/compile_commands.json",
+		"CodeGPT.apiKey": "Perplexity"
     }
 }

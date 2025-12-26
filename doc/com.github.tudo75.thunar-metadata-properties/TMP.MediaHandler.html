@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>TMP.MediaHandler &ndash; com.github.tudo75.thunar-metadata-properties &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">TMP.MediaHandler &ndash; com.github.tudo75.thunar-metadata-properties Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">com.github.tudo75.thunar-metadata-properties</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="TMP.html">TMP</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">MediaHandler</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="struct"><a href="TMP.MediaHandler.EmbeddedImage.html">EmbeddedImage</a></li>
+          <li class="creation_method"><a href="TMP.MediaHandler.MediaHandler.html">MediaHandler</a></li>
+          <li class="method"><a href="TMP.MediaHandler.build_audio_ui.html">build_audio_ui</a></li>
+          <li class="method"><a href="TMP.MediaHandler.build_video_ui.html">build_video_ui</a></li>
+          <li class="method"><a href="TMP.MediaHandler.detect_bitrate_mode.html">detect_bitrate_mode</a></li>
+          <li class="method"><a href="TMP.MediaHandler.display_embedded_images.html">display_embedded_images</a></li>
+          <li class="method"><a href="TMP.MediaHandler.extract_tags_loose.html">extract_tags_loose</a></li>
+          <li class="method"><a href="TMP.MediaHandler.extract_tags_strict_container.html">extract_tags_strict_container</a></li>
+          <li class="method"><a href="TMP.MediaHandler.gather_images_generic.html">gather_images_generic</a></li>
+          <li class="method"><a href="TMP.MediaHandler.get_container_name.html">get_container_name</a></li>
+          <li class="method"><a href="TMP.MediaHandler.get_duration_string.html">get_duration_string</a></li>
+          <li class="method"><a href="TMP.MediaHandler.get_first_stream.html">get_first_stream</a></li>
+          <li class="method"><a href="TMP.MediaHandler.get_page_title.html">get_page_title</a></li>
+          <li class="method"><a href="TMP.MediaHandler.get_properties_panel.html">get_properties_panel</a></li>
+          <li class="method"><a href="TMP.MediaHandler.get_readable_codec.html">get_readable_codec</a></li>
+          <li class="method"><a href="TMP.MediaHandler.get_streams.html">get_streams</a></li>
+          <li class="method"><a href="TMP.MediaHandler.get_tag_string.html">get_tag_string</a></li>
+          <li class="method"><a href="TMP.MediaHandler.is_valid_image.html">is_valid_image</a></li>
+          <li class="method"><a href="TMP.MediaHandler.parse_audio_stream.html">parse_audio_stream</a></li>
+          <li class="method"><a href="TMP.MediaHandler.parse_common_tags.html">parse_common_tags</a></li>
+          <li class="method"><a href="TMP.MediaHandler.parse_video_stream.html">parse_video_stream</a></li>
+          <li class="method"><a href="TMP.MediaHandler.scale_pixbuf_to_max_height.html">scale_pixbuf_to_max_height</a></li>
+          <li class="field"><a href="TMP.MediaHandler.file.html">file</a></li>
+          <li class="field"><a href="TMP.MediaHandler.grid.html">grid</a></li>
+          <li class="field"><a href="TMP.MediaHandler.image_list.html">image_list</a></li>
+          <li class="field"><a href="TMP.MediaHandler.info.html">info</a></li>
+          <li class="field"><a href="TMP.MediaHandler.is_audio_only.html">is_audio_only</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">MediaHandler</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#TMP.MediaHandler" alt="Object hierarchy for MediaHandler" src="img/TMP.MediaHandler.svg"/>
+
+      <map id="TMP.MediaHandler" name="TMP.MediaHandler">
+<area shape="rect" id="node1" href="TMP.MediaHandler.html" title="TMP.MediaHandler" alt="" coords="54,101,225,149"/>
+<area shape="rect" id="node3" href="TMP.FileHandler.html" title="TMP.FileHandler" alt="" coords="143,5,293,53"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">MediaHandler</span></b> : <span class="main_type"><span class="class">Object</span></span>, <span class="main_type"><a href="TMP.FileHandler.html" class="interface">FileHandler</a></span>
+        </div>
+        <div class="description">
+          <p>Media File Handler implementing FileHandler interface.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="TMP.html">TMP</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">com.github.tudo75.thunar-metadata-properties</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Structs:</h3>
+        <ul class="navi_inline">
+          <li class="struct"><a href="TMP.MediaHandler.EmbeddedImage.html">EmbeddedImage</a> - <span class="brief_description">Struct to hold embedded
+              image sample and label.</span></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="TMP.MediaHandler.MediaHandler.html" class="creation_method">MediaHandler</a></b> (<span class="main_type"><span class="interface">File</span></span> f)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructor: Analyze the media file using GStreamer Discoverer.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.build_audio_ui.html" class="method">build_audio_ui</a></b> (<span class="main_keyword">ref</span> <span class="main_basic_type"><span class="struct">int</span></span> row)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Build the UI for audio properties.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.build_video_ui.html" class="method">build_video_ui</a></b> (<span class="main_keyword">ref</span> <span class="main_basic_type"><span class="struct">int</span></span> row)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Build the UI for video properties.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="TMP.MediaHandler.detect_bitrate_mode.html" class="method">detect_bitrate_mode</a></b> (<span class="main_type"><span class="class">TagList</span></span>? tags, <span class="main_basic_type"><span class="struct">uint</span></span> current_bitrate)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Detect the bitrate mode for an audio stream.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.display_embedded_images.html" class="method">display_embedded_images</a></b> (<span class="main_keyword">ref</span> <span class="main_basic_type"><span class="struct">int</span></span> row)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Display embedded images in the grid.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.extract_tags_loose.html" class="method">extract_tags_loose</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> title, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> artist, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> album, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> genre, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> album_artist, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">uint</span></span> track, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> date)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Extract common tags loosely from container and all streams.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.extract_tags_strict_container.html" class="method">extract_tags_strict_container</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> title, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> artist, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> album, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> genre, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> album_artist, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">uint</span></span> track, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> date)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Extract common tags strictly from the container-level stream info.
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.gather_images_generic.html" class="method">gather_images_generic</a></b> (<span class="main_type"><span class="class">TagList</span></span>? t)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gather embedded images from a Gst.TagList by checking all tags for 
+                Gst.Sample values.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="TMP.MediaHandler.get_container_name.html" class="method">get_container_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="TMP.MediaHandler.get_duration_string.html" class="method">get_duration_string</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get the duration of the media file as a formatted string.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span>T</span></span> <b><a href="TMP.MediaHandler.get_first_stream.html" class="method">get_first_stream</a></b>&lt;<b><span>T</span></b>&gt; ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get the first stream of a specific type from the media info.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="TMP.MediaHandler.get_page_title.html" class="method">get_page_title</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get the title for the property page.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Widget</span></span> <b><a href="TMP.MediaHandler.get_properties_panel.html" class="method">get_properties_panel</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get the properties panel widget for the media file.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="TMP.MediaHandler.get_readable_codec.html" class="method">get_readable_codec</a></b> (<span class="main_type"><span class="class">Structure</span></span> structure)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Convert a Gst.Structure codec name to a human-readable format.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="class">List</span></span>&lt;<span class="main_type"><span>T</span></span>&gt; <b><a href="TMP.MediaHandler.get_streams.html" class="method">get_streams</a></b>&lt;<b><span>T</span></b>&gt; ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get a list of streams of a specific type from the media info.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span>? <b><a href="TMP.MediaHandler.get_tag_string.html" class="method">get_tag_string</a></b> (<span class="main_type"><span class="class">TagList</span></span>? tags, <span class="main_basic_type"><span class="class">string</span></span> tag_name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get a string value for a specific tag from a Gst.TagList.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="TMP.MediaHandler.is_valid_image.html" class="method">is_valid_image</a></b> (<span class="main_type"><span class="class">Sample</span></span> s)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Check if a Gst.Sample likely contains image data.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.parse_audio_stream.html" class="method">parse_audio_stream</a></b> (<span class="main_type"><span class="class">DiscovererAudioInfo</span></span> a, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> codec, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> channels, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> rate, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> bitrate, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> br_mode, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> lang)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Parse audio stream details into output parameters.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.parse_common_tags.html" class="method">parse_common_tags</a></b> (<span class="main_type"><span class="class">TagList</span></span>? tags, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> t, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> a, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> al, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> g, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> aa, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="struct">uint</span></span> trk, <span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> d)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Parse common tags from a Gst.TagList into provided references.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="TMP.MediaHandler.parse_video_stream.html" class="method">parse_video_stream</a></b> (<span class="main_type"><span class="class">DiscovererVideoInfo</span></span> v, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> codec, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> res, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> fps, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> fr_mode, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> bitrate, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> br_mode, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="class">string</span></span> lang)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Parse video stream details into output parameters.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="class">Pixbuf</span></span>? <b><a href="TMP.MediaHandler.scale_pixbuf_to_max_height.html" class="method">scale_pixbuf_to_max_height</a></b> (<span class="main_type"><span class="class">Pixbuf</span></span> pix, <span class="main_basic_type"><span class="struct">int</span></span> max_height = <span class="main_literal">250</span>)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Scale a Gdk.Pixbuf to a maximum height while maintaining aspect ratio.
+              </span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="interface">File</span></span> <b><a href="TMP.MediaHandler.file.html" class="field">file</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="class">Grid</span></span> <b><a href="TMP.MediaHandler.grid.html" class="field">grid</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="class">List</span></span>&lt;<span class="main_type"><a href="TMP.MediaHandler.EmbeddedImage.html" class="struct">EmbeddedImage</a></span>?&gt; <b><a href="TMP.MediaHandler.image_list.html" class="field">image_list</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="class">DiscovererInfo</span></span>? <b><a href="TMP.MediaHandler.info.html" class="field">info</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="TMP.MediaHandler.is_audio_only.html" class="field">is_audio_only</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline" onclick="toggle_box (this, 'box-content-6')">All known members inherited from class GLib.Object</div>
+          <div class="content" id="box-content-6">
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="method">@get</li>
+                <li class="static_method">@new</li>
+                <li class="method">@ref</li>
+                <li class="method">@set</li>
+                <li class="method">add_toggle_ref</li>
+                <li class="method">add_weak_pointer</li>
+                <li class="method">bind_property</li>
+                <li class="method">connect</li>
+                <li class="virtual_method">constructed</li>
+                <li class="method">disconnect</li>
+                <li class="virtual_method">dispose</li>
+                <li class="method">dup_data</li>
+                <li class="method">dup_qdata</li>
+                <li class="method">force_floating</li>
+                <li class="method">freeze_notify</li>
+                <li class="method">get_class</li>
+                <li class="method">get_data</li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="method">get_property</li>
+                <li class="method">get_qdata</li>
+                <li class="method">get_type</li>
+                <li class="method">getv</li>
+                <li class="static_method">interface_find_property</li>
+                <li class="static_method">interface_install_property</li>
+                <li class="static_method">interface_list_properties</li>
+                <li class="method">is_floating</li>
+                <li class="static_method">new_valist</li>
+                <li class="static_method">new_with_properties</li>
+                <li class="static_method">newv</li>
+                <li class="signal">notify</li>
+                <li class="method">notify_property</li>
+                <li class="field">ref_count</li>
+                <li class="method">ref_sink</li>
+                <li class="method">remove_toggle_ref</li>
+                <li class="method">remove_weak_pointer</li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="method">replace_data</li>
+                <li class="method">replace_qdata</li>
+                <li class="method">set_data</li>
+                <li class="method">set_data_full</li>
+                <li class="method">set_property</li>
+                <li class="method">set_qdata</li>
+                <li class="method">set_qdata_full</li>
+                <li class="method">set_valist</li>
+                <li class="method">setv</li>
+                <li class="method">steal_data</li>
+                <li class="method">steal_qdata</li>
+                <li class="method">thaw_notify</li>
+                <li class="method">unref</li>
+                <li class="method">watch_closure</li>
+                <li class="method">weak_ref</li>
+                <li class="method">weak_unref</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headline" onclick="toggle_box (this, 'box-content-7')">All known members inherited from interface TMP.FileHandler</div>
+          <div class="content" id="box-content-7">
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="static_method"><a href="TMP.FileHandler.create.html">create</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="abstract_method"><a href="TMP.FileHandler.get_page_title.html">get_page_title</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="abstract_method"><a href="TMP.FileHandler.get_properties_panel.html">get_properties_panel</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="https://docs.vala.dev"><kbd>valadoc</kbd></a>
+    </div>
+  </body>
+</html>

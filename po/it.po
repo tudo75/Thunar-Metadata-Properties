@@ -1,811 +1,918 @@
-#: src/handlers/file_handler.vala:17
+#: src/handlers/file_handler.vala:55
 #, c-format
 msgid "Factory: Opening '%s' (MIME: %s)\n"
 msgstr ""
 
-#: src/handlers/file_handler.vala:49
+#: src/handlers/file_handler.vala:85
 #, c-format
 msgid "Error detecting type: %s\n"
 msgstr ""
 
-#: src/handlers/image_handler.vala:21
+#. DEBUG: Force print to verify constructor started
+#: src/handlers/image_handler.vala:27
+#, c-format
+msgid "ImageHandler: Init started for %s\n"
+msgstr ""
+
+#: src/handlers/image_handler.vala:44
 msgid "Image Properties"
 msgstr ""
 
-#: src/handlers/image_handler.vala:31
+#: src/handlers/image_handler.vala:58
 msgid "Image Metadata"
 msgstr ""
 
-#: src/handlers/image_handler.vala:41
+#: src/handlers/image_handler.vala:68
 msgid "GIMP XCF metadata not supported."
 msgstr ""
 
-#: src/handlers/image_handler.vala:42
+#: src/handlers/image_handler.vala:69
 msgid "No metadata found or format unsupported."
 msgstr ""
 
-#: src/handlers/image_handler.vala:43
+#: src/handlers/image_handler.vala:70 src/handlers/office_handler.vala:76
+#: src/handlers/legacy_office_handler.vala:74
 msgid "Status:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:52
+#: src/handlers/image_handler.vala:83
 #, c-format
 msgid "%d x %d pixels"
 msgstr ""
 
-#: src/handlers/image_handler.vala:52 src/handlers/image_handler.vala:264
-#: src/handlers/pdf_handler.vala:54 src/handlers/pdf_handler.vala:139
-#: src/handlers/media_handler.vala:160 src/handlers/media_handler.vala:442
-#: src/handlers/media_handler.vala:444 src/handlers/media_handler.vala:446
+#: src/handlers/image_handler.vala:83 src/handlers/image_handler.vala:344
+#: src/handlers/pdf_handler.vala:81 src/handlers/pdf_handler.vala:174
+#: src/handlers/media_handler.vala:222 src/handlers/media_handler.vala:654
+#: src/handlers/media_handler.vala:656 src/handlers/media_handler.vala:658
 msgid "Unknown"
 msgstr ""
 
-#: src/handlers/image_handler.vala:60
+#: src/handlers/image_handler.vala:91
 msgid "sRGB"
 msgstr ""
 
-#: src/handlers/image_handler.vala:61
+#: src/handlers/image_handler.vala:92
 msgid "Uncalibrated"
 msgstr ""
 
-#: src/handlers/image_handler.vala:63
+#: src/handlers/image_handler.vala:94
 msgid "Dimensions:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:64
+#: src/handlers/image_handler.vala:95
 msgid "Format:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:65
+#: src/handlers/image_handler.vala:96
 msgid "Date Taken:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:66
+#: src/handlers/image_handler.vala:97
 msgid "Color Space:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:67
+#: src/handlers/image_handler.vala:98
 msgid "Orientation:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:77
+#: src/handlers/image_handler.vala:112
 msgid "Camera Data"
 msgstr ""
 
-#: src/handlers/image_handler.vala:79
+#: src/handlers/image_handler.vala:114
 msgid "Camera Make:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:80
+#: src/handlers/image_handler.vala:115
 msgid "Camera Model:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:84
+#: src/handlers/image_handler.vala:119
 msgid "Lens:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:102
+#: src/handlers/image_handler.vala:140
 msgid "Exposure Settings"
 msgstr ""
 
-#: src/handlers/image_handler.vala:104
+#: src/handlers/image_handler.vala:142
 msgid "Aperture:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:105
+#: src/handlers/image_handler.vala:143
 msgid "Exposure:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:106
+#: src/handlers/image_handler.vala:144
 msgid "ISO Speed:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:107
+#: src/handlers/image_handler.vala:145
 msgid "Exposure Program:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:108
+#: src/handlers/image_handler.vala:146
 msgid "Metering Mode:"
 msgstr ""
 
 #. Focal Length logic
-#: src/handlers/image_handler.vala:112
+#: src/handlers/image_handler.vala:150
 #, c-format
 msgid "%s mm"
 msgstr ""
 
-#: src/handlers/image_handler.vala:114
+#: src/handlers/image_handler.vala:152
 #, c-format
 msgid "(35mm equiv: %s mm)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:116
+#: src/handlers/image_handler.vala:154
 msgid "Focal Length:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:119
+#: src/handlers/image_handler.vala:157
 msgid "Flash:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:120
+#: src/handlers/image_handler.vala:158
 msgid "White Balance:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:136
+#: src/handlers/image_handler.vala:178
 msgid "GPS Location"
 msgstr ""
 
-#: src/handlers/image_handler.vala:138
+#: src/handlers/image_handler.vala:180
 msgid "Latitude:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:139
+#: src/handlers/image_handler.vala:181
 msgid "Longitude:"
 msgstr ""
 
-#: src/handlers/image_handler.vala:140
+#: src/handlers/image_handler.vala:182
 msgid "Altitude:"
-msgstr ""
-
-#: src/handlers/image_handler.vala:140
-#, c-format
-msgid "%.1f meters"
-msgstr ""
-
-#: src/handlers/image_handler.vala:159
-msgid "Authoring &amp; Description"
-msgstr ""
-
-#: src/handlers/image_handler.vala:161
-msgid "Artist/Creator:"
-msgstr ""
-
-#: src/handlers/image_handler.vala:162
-msgid "Copyright:"
-msgstr ""
-
-#: src/handlers/image_handler.vala:163
-msgid "Description:"
-msgstr ""
-
-#: src/handlers/image_handler.vala:164
-msgid "Software:"
 msgstr ""
 
 #: src/handlers/image_handler.vala:182
 #, c-format
+msgid "%.1f meters"
+msgstr ""
+
+#: src/handlers/image_handler.vala:205
+msgid "Authoring &amp; Description"
+msgstr ""
+
+#: src/handlers/image_handler.vala:207
+msgid "Artist/Creator:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:208
+msgid "Copyright:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:209 src/handlers/office_handler.vala:81
+msgid "Description:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:210
+msgid "Software:"
+msgstr ""
+
+#: src/handlers/image_handler.vala:237
+#, c-format
 msgid "f/%.1f"
 msgstr ""
 
-#: src/handlers/image_handler.vala:185
+#: src/handlers/image_handler.vala:240
 msgid "f/"
 msgstr ""
 
-#. Logic similar to Thunar-APR to show 1/60 instead of 0.0166
 #. Raw usually comes as "1/60" or "10/600" or "0.0166"
-#: src/handlers/image_handler.vala:191 src/handlers/image_handler.vala:201
+#: src/handlers/image_handler.vala:251 src/handlers/image_handler.vala:261
 #, c-format
 msgid "%s sec"
 msgstr ""
 
 #. Convert decimal to 1/x
 #. Round to nearest int
-#: src/handlers/image_handler.vala:199
+#: src/handlers/image_handler.vala:259
 #, c-format
 msgid "1/%d sec"
 msgstr ""
 
-#: src/handlers/image_handler.vala:208
+#: src/handlers/image_handler.vala:272
 msgid "Did not fire"
 msgstr ""
 
-#: src/handlers/image_handler.vala:210
+#: src/handlers/image_handler.vala:274
 msgid "Fired"
 msgstr ""
 
-#: src/handlers/image_handler.vala:211
+#: src/handlers/image_handler.vala:275
 msgid ", return detected"
 msgstr ""
 
-#: src/handlers/image_handler.vala:212
+#: src/handlers/image_handler.vala:276
 msgid ", return not detected"
 msgstr ""
 
-#: src/handlers/image_handler.vala:213
+#: src/handlers/image_handler.vala:277
 msgid ", auto"
 msgstr ""
 
-#: src/handlers/image_handler.vala:214
+#: src/handlers/image_handler.vala:278
 msgid ", manual"
 msgstr ""
 
-#: src/handlers/image_handler.vala:215
+#: src/handlers/image_handler.vala:279
 msgid ", red-eye reduction"
 msgstr ""
 
-#: src/handlers/image_handler.vala:222
+#: src/handlers/image_handler.vala:290
 msgid "Auto"
 msgstr ""
 
-#: src/handlers/image_handler.vala:223 src/handlers/image_handler.vala:247
+#: src/handlers/image_handler.vala:291 src/handlers/image_handler.vala:323
 msgid "Manual"
 msgstr ""
 
-#: src/handlers/image_handler.vala:230
+#: src/handlers/image_handler.vala:302
 msgid "Top-left (Normal)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:231
+#: src/handlers/image_handler.vala:303
 msgid "Top-right (Mirrored)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:232
+#: src/handlers/image_handler.vala:304
 msgid "Bottom-right (180)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:233
+#: src/handlers/image_handler.vala:305
 msgid "Bottom-left (V-Flip)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:234
+#: src/handlers/image_handler.vala:306
 msgid "Left-top (Transpose)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:235
+#: src/handlers/image_handler.vala:307
 msgid "Right-top (90 CW)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:236
+#: src/handlers/image_handler.vala:308
 msgid "Right-bottom (Transverse)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:237
+#: src/handlers/image_handler.vala:309
 msgid "Left-bottom (90 CCW)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:238
+#: src/handlers/image_handler.vala:310
 msgid "Normal"
 msgstr ""
 
-#: src/handlers/image_handler.vala:246
+#: src/handlers/image_handler.vala:322
 msgid "Not defined"
 msgstr ""
 
-#: src/handlers/image_handler.vala:248
+#: src/handlers/image_handler.vala:324
 msgid "Normal program"
 msgstr ""
 
-#: src/handlers/image_handler.vala:249
+#: src/handlers/image_handler.vala:325
 msgid "Aperture priority"
 msgstr ""
 
-#: src/handlers/image_handler.vala:250
+#: src/handlers/image_handler.vala:326
 msgid "Shutter priority"
 msgstr ""
 
-#: src/handlers/image_handler.vala:251
+#: src/handlers/image_handler.vala:327
 msgid "Creative program"
 msgstr ""
 
-#: src/handlers/image_handler.vala:252
+#: src/handlers/image_handler.vala:328
 msgid "Action program"
 msgstr ""
 
-#: src/handlers/image_handler.vala:253
+#: src/handlers/image_handler.vala:329
 msgid "Portrait mode"
 msgstr ""
 
-#: src/handlers/image_handler.vala:254
+#: src/handlers/image_handler.vala:330
 msgid "Landscape mode"
 msgstr ""
 
-#: src/handlers/image_handler.vala:255 src/handlers/image_handler.vala:272
+#: src/handlers/image_handler.vala:331 src/handlers/image_handler.vala:352
 #, c-format
 msgid "Unknown (%ld)"
 msgstr ""
 
-#: src/handlers/image_handler.vala:265
+#: src/handlers/image_handler.vala:345
 msgid "Average"
 msgstr ""
 
-#: src/handlers/image_handler.vala:266
+#: src/handlers/image_handler.vala:346
 msgid "CenterWeightedAverage"
 msgstr ""
 
-#: src/handlers/image_handler.vala:267
+#: src/handlers/image_handler.vala:347
 msgid "Spot"
 msgstr ""
 
-#: src/handlers/image_handler.vala:268
+#: src/handlers/image_handler.vala:348
 msgid "MultiSpot"
 msgstr ""
 
-#: src/handlers/image_handler.vala:269
+#: src/handlers/image_handler.vala:349
 msgid "Pattern"
 msgstr ""
 
-#: src/handlers/image_handler.vala:270
+#: src/handlers/image_handler.vala:350
 msgid "Partial"
 msgstr ""
 
-#: src/handlers/image_handler.vala:271
+#: src/handlers/image_handler.vala:351
 msgid "Other"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:25
+#. DEBUG: Force print to verify constructor started
+#: src/handlers/pdf_handler.vala:30
+#, c-format
+msgid "PdfHandler: Init started for %s\n"
+msgstr ""
+
+#: src/handlers/pdf_handler.vala:48
 msgid "PDF Properties"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:35
+#: src/handlers/pdf_handler.vala:62
 msgid "General Info"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:42
+#: src/handlers/pdf_handler.vala:69 src/handlers/office_handler.vala:78
+#: src/handlers/legacy_office_handler.vala:76
 msgid "Title:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:43
+#: src/handlers/pdf_handler.vala:70 src/handlers/legacy_office_handler.vala:84
 msgid "Author:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:44
+#: src/handlers/pdf_handler.vala:71 src/handlers/office_handler.vala:79
+#: src/handlers/legacy_office_handler.vala:77
 msgid "Subject:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:45
+#: src/handlers/pdf_handler.vala:72 src/handlers/office_handler.vala:80
+#: src/handlers/legacy_office_handler.vala:78
 msgid "Keywords:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:48 src/handlers/media_handler.vala:83
+#: src/handlers/pdf_handler.vala:75 src/handlers/media_handler.vala:141
 msgid "Technical Details"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:55
+#: src/handlers/pdf_handler.vala:82
 msgid "No (Open)"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:55
+#: src/handlers/pdf_handler.vala:82
 msgid "Encrypted"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:67
+#: src/handlers/pdf_handler.vala:94 src/handlers/office_handler.vala:86
 msgid "Creator:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:68
+#: src/handlers/pdf_handler.vala:95
 msgid "Producer:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:69
+#: src/handlers/pdf_handler.vala:96 src/handlers/office_handler.vala:88
+#: src/handlers/legacy_office_handler.vala:86
 msgid "Created:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:70
+#: src/handlers/pdf_handler.vala:97 src/handlers/office_handler.vala:89
+#: src/handlers/legacy_office_handler.vala:87
 msgid "Modified:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:71
+#: src/handlers/pdf_handler.vala:98
 msgid "PDF Version:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:72
+#: src/handlers/pdf_handler.vala:99 src/handlers/legacy_office_handler.vala:96
 msgid "Security:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:73
+#: src/handlers/pdf_handler.vala:100
 msgid "Paper Size:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:74
+#: src/handlers/pdf_handler.vala:101
 msgid "Pages:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:79
+#: src/handlers/pdf_handler.vala:106
 msgid "Embedded Fonts"
 msgstr ""
 
 #. Pass 'true' to enable markup parsing in UiHelper
-#: src/handlers/pdf_handler.vala:82
+#: src/handlers/pdf_handler.vala:109
 msgid "Font List:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:85
+#: src/handlers/pdf_handler.vala:112
 msgid "Fonts:"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:85
+#: src/handlers/pdf_handler.vala:112
 msgid "None found"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:102
+#: src/handlers/pdf_handler.vala:132
 msgid "Unnamed"
 msgstr ""
 
-#: src/handlers/pdf_handler.vala:124
+#: src/handlers/pdf_handler.vala:154
 msgid "... and more"
 msgstr ""
 
-#: src/handlers/media_handler.vala:43
+#. DEBUG: Force print to verify constructor started
+#: src/handlers/media_handler.vala:66
+#, c-format
+msgid "MediaHandler: Init started for %s\n"
+msgstr ""
+
+#: src/handlers/media_handler.vala:89
 #, c-format
 msgid "Media Analysis Error: %s"
 msgstr ""
 
-#: src/handlers/media_handler.vala:48
+#: src/handlers/media_handler.vala:98
 msgid "Audio Properties"
 msgstr ""
 
-#: src/handlers/media_handler.vala:48
+#: src/handlers/media_handler.vala:98
 msgid "Video Properties"
 msgstr ""
 
-#: src/handlers/media_handler.vala:58
+#: src/handlers/media_handler.vala:112
 msgid "<b>Audio Metadata</b>"
 msgstr ""
 
-#: src/handlers/media_handler.vala:58
+#: src/handlers/media_handler.vala:112
 msgid "<b>Video Metadata</b>"
 msgstr ""
 
-#: src/handlers/media_handler.vala:75
+#: src/handlers/media_handler.vala:133
 msgid "Main Title:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:76 src/handlers/media_handler.vala:105
+#: src/handlers/media_handler.vala:134 src/handlers/media_handler.vala:167
 msgid "Artist:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:77
+#: src/handlers/media_handler.vala:135
 msgid "Album:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:78
+#: src/handlers/media_handler.vala:136
 msgid "Track:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:79
+#: src/handlers/media_handler.vala:137
 msgid "Genre:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:80 src/handlers/media_handler.vala:106
+#: src/handlers/media_handler.vala:138 src/handlers/media_handler.vala:168
 msgid "Date:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:89 src/handlers/media_handler.vala:107
+#: src/handlers/media_handler.vala:147 src/handlers/media_handler.vala:169
 msgid "Container:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:90 src/handlers/media_handler.vala:108
+#: src/handlers/media_handler.vala:148 src/handlers/media_handler.vala:170
 msgid "Duration:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:91 src/handlers/media_handler.vala:123
-#: src/handlers/media_handler.vala:145
+#: src/handlers/media_handler.vala:149 src/handlers/media_handler.vala:185
+#: src/handlers/media_handler.vala:207
 msgid "Codec:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:92 src/handlers/media_handler.vala:127
+#: src/handlers/media_handler.vala:150 src/handlers/media_handler.vala:189
 msgid "Bitrate:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:93 src/handlers/media_handler.vala:128
-#: src/handlers/media_handler.vala:149
+#: src/handlers/media_handler.vala:151 src/handlers/media_handler.vala:190
+#: src/handlers/media_handler.vala:211
 msgid "Bitrate Mode:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:94 src/handlers/media_handler.vala:148
+#: src/handlers/media_handler.vala:152 src/handlers/media_handler.vala:210
 msgid "Sample Rate:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:95 src/handlers/media_handler.vala:147
+#: src/handlers/media_handler.vala:153 src/handlers/media_handler.vala:209
 msgid "Channels:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:96 src/handlers/media_handler.vala:129
-#: src/handlers/media_handler.vala:146
+#: src/handlers/media_handler.vala:154 src/handlers/media_handler.vala:191
+#: src/handlers/media_handler.vala:208
 msgid "Language:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:104
+#: src/handlers/media_handler.vala:166
 msgid "File Title:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:114
+#: src/handlers/media_handler.vala:176
 #, c-format
 msgid "Video Stream %d"
 msgstr ""
 
-#: src/handlers/media_handler.vala:114
+#: src/handlers/media_handler.vala:176
 msgid "Video Stream"
 msgstr ""
 
-#: src/handlers/media_handler.vala:118 src/handlers/media_handler.vala:140
+#: src/handlers/media_handler.vala:180 src/handlers/media_handler.vala:202
 msgid "Stream Title:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:124
+#: src/handlers/media_handler.vala:186
 msgid "Resolution:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:125
+#: src/handlers/media_handler.vala:187
 msgid "Framerate:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:126
+#: src/handlers/media_handler.vala:188
 msgid "Frame Mode:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:136
+#: src/handlers/media_handler.vala:198
 #, c-format
 msgid "Audio Stream %d"
 msgstr ""
 
-#: src/handlers/media_handler.vala:136
+#: src/handlers/media_handler.vala:198
 msgid "Audio Stream"
 msgstr ""
 
-#: src/handlers/media_handler.vala:155
+#: src/handlers/media_handler.vala:217
 msgid "Subtitles"
 msgstr ""
 
-#: src/handlers/media_handler.vala:161
+#: src/handlers/media_handler.vala:223
 #, c-format
 msgid "%s (%s)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:162
+#: src/handlers/media_handler.vala:224
 #, c-format
 msgid "Track %d:"
 msgstr ""
 
-#: src/handlers/media_handler.vala:186
+#: src/handlers/media_handler.vala:264 src/handlers/media_handler.vala:291
 msgid "Embedded Images"
 msgstr ""
 
-#: src/handlers/media_handler.vala:219
-msgid "Cover Art"
+#: src/handlers/media_handler.vala:271
+msgid "Attachment"
 msgstr ""
 
-#: src/handlers/media_handler.vala:227
-msgid "Preview Image"
+#: src/handlers/media_handler.vala:285
+#, c-format
+msgid "Attachment extraction failed: %s\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:239
-msgid "Front Cover"
+#: src/handlers/media_handler.vala:315
+#, c-format
+msgid "WARNING: Sample found for '%s' but failed to create Pixbuf.\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:240
-msgid "Back Cover"
+#: src/handlers/media_handler.vala:319
+msgid ""
+"\n"
+"--- RESULT: No images added to image_list ---\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:241
-msgid "Leaflet Page"
+#: src/handlers/media_handler.vala:350
+#, c-format
+msgid "SUCCESS: Added image from tag '%s' (index %u)\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:242
-msgid "Medium / Disc"
+#: src/handlers/media_handler.vala:352
+#, c-format
+msgid "IGNORED: Tag '%s' is a Sample but not a valid image.\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:243
-msgid "Lead Artist"
+#: src/handlers/media_handler.vala:369
+#, c-format
+msgid "    [Check] Caps Name: %s\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:244
-msgid "Artist"
+#: src/handlers/media_handler.vala:372
+msgid "    [Check] Caps are null or empty.\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:245
-msgid "Conductor"
+#: src/handlers/media_handler.vala:382
+#, c-format
+msgid "    [Check] Info Mime (%s): %s\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:246
-msgid "Band / Orchestra"
+#: src/handlers/media_handler.vala:394
+#, c-format
+msgid "    [Check] Filename suggests image: %s\n"
 msgstr ""
 
-#: src/handlers/media_handler.vala:247
-msgid "Composer"
-msgstr ""
-
-#: src/handlers/media_handler.vala:248
-msgid "Lyricist"
-msgstr ""
-
-#: src/handlers/media_handler.vala:249
-msgid "Recording Location"
-msgstr ""
-
-#: src/handlers/media_handler.vala:250
-msgid "During Recording"
-msgstr ""
-
-#: src/handlers/media_handler.vala:251
-msgid "During Performance"
-msgstr ""
-
-#: src/handlers/media_handler.vala:252
-msgid "Video Capture"
-msgstr ""
-
-#: src/handlers/media_handler.vala:253
-msgid "Fish / Icon"
-msgstr ""
-
-#: src/handlers/media_handler.vala:254
-msgid "Illustration"
-msgstr ""
-
-#: src/handlers/media_handler.vala:255
-msgid "Band / Artist Logo"
-msgstr ""
-
-#: src/handlers/media_handler.vala:256
-msgid "Publisher / Studio Logo"
-msgstr ""
-
-#: src/handlers/media_handler.vala:341
+#: src/handlers/media_handler.vala:522
 #, c-format
 msgid "%.2f fps"
 msgstr ""
 
-#: src/handlers/media_handler.vala:342 src/handlers/media_handler.vala:344
+#: src/handlers/media_handler.vala:523 src/handlers/media_handler.vala:525
 msgid "Variable (VFR)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:342
+#: src/handlers/media_handler.vala:523
 msgid "Constant (CFR)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:370 src/handlers/media_handler.vala:377
+#: src/handlers/media_handler.vala:567 src/handlers/media_handler.vala:574
 msgid "Constant (CBR)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:374 src/handlers/media_handler.vala:376
+#: src/handlers/media_handler.vala:571 src/handlers/media_handler.vala:573
 msgid "Variable (VBR)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:400
+#: src/handlers/media_handler.vala:612
 msgid "H.264 (AVC)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:401
+#: src/handlers/media_handler.vala:613
 msgid "H.265 (HEVC)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:402
+#: src/handlers/media_handler.vala:614
 msgid "VP8"
 msgstr ""
 
-#: src/handlers/media_handler.vala:403
+#: src/handlers/media_handler.vala:615
 msgid "VP9"
 msgstr ""
 
-#: src/handlers/media_handler.vala:404
+#: src/handlers/media_handler.vala:616
 msgid "AV1"
 msgstr ""
 
-#: src/handlers/media_handler.vala:405
+#: src/handlers/media_handler.vala:617
 msgid "Theora"
 msgstr ""
 
-#: src/handlers/media_handler.vala:406
+#: src/handlers/media_handler.vala:618
 msgid "Xvid (MPEG-4 Part 2)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:407
+#: src/handlers/media_handler.vala:619
 msgid "DivX (MPEG-4 Part 2)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:411
+#: src/handlers/media_handler.vala:623
 msgid "MPEG-4 Part 2 (Xvid/DivX)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:412
+#: src/handlers/media_handler.vala:624
 msgid "MPEG-2 Video"
 msgstr ""
 
-#: src/handlers/media_handler.vala:413
+#: src/handlers/media_handler.vala:625
 msgid "MPEG-1 Video"
 msgstr ""
 
-#: src/handlers/media_handler.vala:415
+#: src/handlers/media_handler.vala:627
 msgid "MPEG Video"
 msgstr ""
 
-#: src/handlers/media_handler.vala:416
+#: src/handlers/media_handler.vala:628
 msgid "Raw Video"
 msgstr ""
 
-#: src/handlers/media_handler.vala:420
+#: src/handlers/media_handler.vala:632
 msgid "AAC (MPEG-4 Audio)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:421
+#: src/handlers/media_handler.vala:633
 msgid "MPEG-2 Audio"
 msgstr ""
 
-#: src/handlers/media_handler.vala:422
+#: src/handlers/media_handler.vala:634
 msgid "MP3 (MPEG-1 Audio)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:424
+#: src/handlers/media_handler.vala:636
 msgid "MPEG Audio"
 msgstr ""
 
-#: src/handlers/media_handler.vala:425
+#: src/handlers/media_handler.vala:637
 msgid "AAC Audio"
 msgstr ""
 
-#: src/handlers/media_handler.vala:426
+#: src/handlers/media_handler.vala:638
 msgid "AAC (LATM)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:427
+#: src/handlers/media_handler.vala:639
 msgid "Vorbis"
 msgstr ""
 
-#: src/handlers/media_handler.vala:428
+#: src/handlers/media_handler.vala:640
 msgid "Opus"
 msgstr ""
 
-#: src/handlers/media_handler.vala:429
+#: src/handlers/media_handler.vala:641
 msgid "FLAC"
 msgstr ""
 
-#: src/handlers/media_handler.vala:430
+#: src/handlers/media_handler.vala:642
 msgid "WAV / PCM"
 msgstr ""
 
-#: src/handlers/media_handler.vala:431
+#: src/handlers/media_handler.vala:643
 msgid "Dolby Digital (AC-3)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:432
+#: src/handlers/media_handler.vala:644
 msgid "Dolby Digital Plus (E-AC-3)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:433
+#: src/handlers/media_handler.vala:645
 msgid "DVD Subtitles"
 msgstr ""
 
-#: src/handlers/media_handler.vala:434
+#: src/handlers/media_handler.vala:646
 msgid "Bluray PGS"
 msgstr ""
 
-#: src/handlers/media_handler.vala:435
+#: src/handlers/media_handler.vala:647
 msgid "Kate Subtitles"
 msgstr ""
 
-#: src/handlers/media_handler.vala:436
+#: src/handlers/media_handler.vala:648
 msgid "Text Subtitles"
 msgstr ""
 
-#: src/handlers/media_handler.vala:450
+#: src/handlers/media_handler.vala:662
 msgid "Matroska (MKV)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:451
+#: src/handlers/media_handler.vala:663
 msgid "QuickTime / MP4"
 msgstr ""
 
-#: src/handlers/media_handler.vala:452
+#: src/handlers/media_handler.vala:664
 msgid "MPEG-4 Part 14"
 msgstr ""
 
-#: src/handlers/media_handler.vala:453
+#: src/handlers/media_handler.vala:665
 msgid "AVI"
 msgstr ""
 
-#: src/handlers/media_handler.vala:454
+#: src/handlers/media_handler.vala:666
 msgid "Ogg Container"
 msgstr ""
 
-#: src/handlers/media_handler.vala:455
+#: src/handlers/media_handler.vala:667
 msgid "MP3 (ID3 Tagged)"
 msgstr ""
 
-#: src/handlers/media_handler.vala:456
+#: src/handlers/media_handler.vala:668
 msgid "WAV Audio"
 msgstr ""
 
-#: src/handlers/media_handler.vala:457
+#: src/handlers/media_handler.vala:669
 msgid "FLAC Audio"
+msgstr ""
+
+#. DEBUG: Force print to verify constructor started
+#: src/handlers/office_handler.vala:45
+#, c-format
+msgid "OfficeHandler: Init started for %s\n"
+msgstr ""
+
+#: src/handlers/office_handler.vala:59
+#: src/handlers/legacy_office_handler.vala:57
+msgid "Document Properties"
+msgstr ""
+
+#: src/handlers/office_handler.vala:73
+msgid "Office Metadata"
+msgstr ""
+
+#: src/handlers/office_handler.vala:84
+#: src/handlers/legacy_office_handler.vala:82
+msgid "Authoring"
+msgstr ""
+
+#: src/handlers/office_handler.vala:87
+msgid "Last Modified By:"
+msgstr ""
+
+#: src/handlers/office_handler.vala:90
+msgid "Revision:"
+msgstr ""
+
+#: src/handlers/office_handler.vala:93
+#: src/handlers/legacy_office_handler.vala:91
+msgid "Statistics"
+msgstr ""
+
+#: src/handlers/office_handler.vala:95
+msgid "Document Type:"
+msgstr ""
+
+#: src/handlers/office_handler.vala:96
+#: src/handlers/legacy_office_handler.vala:88
+msgid "Application:"
+msgstr ""
+
+#: src/handlers/office_handler.vala:97
+#: src/handlers/legacy_office_handler.vala:93
+msgid "Page Count:"
+msgstr ""
+
+#: src/handlers/office_handler.vala:98
+#: src/handlers/legacy_office_handler.vala:94
+msgid "Word Count:"
+msgstr ""
+
+#: src/handlers/office_handler.vala:102
+msgid "Custom Properties"
+msgstr ""
+
+#. --- DEFENSIVE ZIP CHECK ---
+#. Your file is likely a text/csv file named .xlsx
+#. This check must pass or we set error and return.
+#: src/handlers/office_handler.vala:125
+msgid "OfficeHandler: Invalid ZIP header detected.\n"
+msgstr ""
+
+#: src/handlers/office_handler.vala:127
+msgid ""
+"File is not a valid ZIP archive.\n"
+"(Likely a plain text/CSV file)"
+msgstr ""
+
+#: src/handlers/office_handler.vala:138
+msgid "File path is invalid."
+msgstr ""
+
+#: src/handlers/office_handler.vala:144
+#, c-format
+msgid "OfficeHandler: libarchive failed to open. Error: %d\n"
+msgstr ""
+
+#: src/handlers/office_handler.vala:146
+#, c-format
+msgid "Archive Error: %s"
+msgstr ""
+
+#: src/handlers/office_handler.vala:176
+#, c-format
+msgid "OfficeHandler: Zip Check Failed: %s\n"
+msgstr ""
+
+#. DEBUG: Force print to verify constructor started
+#: src/handlers/legacy_office_handler.vala:46
+#, c-format
+msgid "LegacyOfficeHandler: Init started for %s\n"
+msgstr ""
+
+#: src/handlers/legacy_office_handler.vala:71
+msgid "Legacy Office Metadata"
+msgstr ""
+
+#: src/handlers/legacy_office_handler.vala:79
+msgid "Comments:"
+msgstr ""
+
+#: src/handlers/legacy_office_handler.vala:85
+msgid "Last Saved By:"
+msgstr ""
+
+#: src/handlers/legacy_office_handler.vala:95
+msgid "Char Count:"
+msgstr ""
+
+#: src/handlers/legacy_office_handler.vala:134
+#, c-format
+msgid "Failed to read OLE2 file: %s"
 msgstr ""
